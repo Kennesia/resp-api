@@ -28,6 +28,9 @@ jobs:
         php -r "unlink('composer-setup.php');"
     
     - name: Validate Composer
-      run: composer validate --no-check-all --ansi --no-interaction
+      run: |
+        ls  # Memastikan bahwa kita berada di direktori yang benar
+        composer validate --no-check-all --ansi --no-interaction
     
     # Tambahkan langkah-langkah lain yang diperlukan, misalnya menjalankan tes PHP, dll.
+    
